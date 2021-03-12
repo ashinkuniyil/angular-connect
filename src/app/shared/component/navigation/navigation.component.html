@@ -1,0 +1,37 @@
+<mat-sidenav
+  #sidenav
+  mode="side"
+  class="bg-primary-black"
+  opened
+  [fixedInViewport]="true"
+>
+  <div class="flex-display column-direction space-between fh">
+    <div class="content-center column-direction flex-display">
+      <fa-icon
+        *ngFor="let icon of icons"
+        [ngClass]="{ 'bg-highlighter-balack': icon.default }"
+        [styles]="icon.active ? { color: '#ff5252' } : { color: icon.color }"
+        [icon]="icon.name"
+        size="lg"
+        class="p-20"
+      ></fa-icon>
+    </div>
+    <div
+      class="content-center column-direction flex-display bg-secondary-black"
+    >
+      <fa-icon
+        [styles]="{ color: 'white' }"
+        [icon]="faCog"
+        size="lg"
+        class="p-20"
+      ></fa-icon>
+      <fa-icon
+        [styles]="{ color: 'white' }"
+        [icon]="faSignOutAlt"
+        size="lg"
+        class="p-20 pointer-cursor"
+        (click)="logout()"
+      ></fa-icon>
+    </div>
+  </div>
+</mat-sidenav>

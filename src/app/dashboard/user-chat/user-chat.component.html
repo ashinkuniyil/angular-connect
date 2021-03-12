@@ -1,0 +1,59 @@
+<div
+  class="flex-display column-direction fh"
+  *ngIf="dataStore.getData('selectedUser'); else noSelection"
+>
+  <div class="header-sectionn flex-display space-between">
+    <div class="status-section flex-display column-direction flex-one">
+      <p class="name">{{ dataStore.getData("selectedUser").first_name }}</p>
+      <p>Active now</p>
+    </div>
+    <div class="flex-display align-center">
+      <fa-icon [icon]="faVideo" size="lg" class="m-r-20"></fa-icon>
+      <fa-icon [icon]="faPhoneAlt" size="lg"></fa-icon>
+    </div>
+  </div>
+  <mat-divider class="m-t-10"></mat-divider>
+  <div
+    class="flex-display column-direction flex-one m-t-10 auto-overflow chat-area"
+  >
+    <div class="flex-display align-center">
+      <img
+        src="{{ dataStore.getData('selectedUser').avatar }}"
+        class="avatar m-r-20"
+      />
+      <div class="user-details flex-display column-direction flex-one">
+        <p>chat</p>
+      </div>
+    </div>
+  </div>
+  <div class="send-sectionn flex-display space-between">
+    <div class="status-section flex-display flex-one">
+      <fa-icon
+        [icon]="faSmile"
+        size="lg"
+        class="m-r-20 flex-display self-center"
+      ></fa-icon>
+      <form class="flex-display flex-one m-r-20">
+        <mat-form-field
+          appearance="fill"
+          [hideRequiredMarker]="true"
+          [floatLabel]="floatLabelControl.value"
+          class="fw"
+        >
+          <input matInput placeholder="Your message here..." required autocomplete="off"/>
+        </mat-form-field>
+      </form>
+    </div>
+    <div class="flex-display align-center">
+      <fa-icon [icon]="faPaperclip" size="lg" class="m-r-20"></fa-icon>
+      <button mat-mini-fab color="warn">
+        <mat-icon>send</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
+<ng-template #noSelection>
+  <div class="flex-display column-direction fh content-center bold">
+    <p>Select user..!</p>
+  </div>
+</ng-template>

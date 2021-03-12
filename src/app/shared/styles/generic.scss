@@ -1,0 +1,150 @@
+@import "variables";
+body {
+  display: flex;
+  min-height: 100vh;
+  background-color: $body-white;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.content-center {
+  align-items: center;
+  justify-content: center;
+}
+.column-direction {
+  flex-direction: column;
+}
+.row-direction {
+  flex-direction: row;
+}
+.align-center {
+  align-items: center;
+}
+.text-center {
+  text-align: center;
+}
+.align-end {
+  justify-content: flex-end;
+}
+.self-end {
+  align-self: flex-end;
+}
+.self-center {
+  align-self: center;
+}
+
+.w-20 {
+  width: 20%;
+}
+.hw {
+  width: 50%;
+}
+.w-35 {
+  width: 35%;
+}
+.fw {
+  width: 100%;
+}
+.fh {
+  height: 100%;
+}
+.m-b-5 {
+  margin-bottom: 5px;
+}
+.m-b-10 {
+  margin-bottom: 10px;
+}
+.m-t-10 {
+  margin-top: 10px !important;
+}
+.m-r-10 {
+  margin-right: 10px;
+}
+.m-r-20 {
+  margin-right: 20px;
+}
+.m-b-15 {
+  margin-bottom: 15px;
+}
+
+.p-20 {
+  padding: 20px;
+  &.no-bottom-padding {
+    padding-bottom: 0;
+  }
+  &.no-top-padding {
+    padding-top: 0;
+  }
+  &.no-right-padding {
+    padding-right: 0;
+  }
+}
+.p-vertical-20 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.color-black {
+  color: $black;
+}
+.bg-black {
+  background-color: $black;
+}
+.bg-white {
+  background-color: $white;
+}
+.bg-base-grey {
+  background-color: $base-grey;
+}
+.form-container {
+  flex-direction: column;
+  box-sizing: border-box;
+  display: flex;
+}
+.form-elements {
+  flex-direction: row;
+  display: flex;
+  flex: 1 1 100%;
+}
+.form-item {
+  flex: 1 1 0%;
+}
+.flex-display {
+  display: flex !important;
+}
+.flex-one {
+  flex: 1;
+}
+.space-between {
+  justify-content: space-between;
+}
+.bg-primary-black {
+  background-color: $primary-black;
+}
+.bg-primary-blue {
+  background-color: $primary-blue;
+}
+.bg-secondary-blue {
+  background-color: $secondary-blue;
+}
+.bg-secondary-black {
+  background-color: $secondary-black;
+}
+.bg-highlighter-balack {
+  background-color: $highlighter-balack;
+}
+.auto-overflow {
+  overflow: auto;
+}
+.hidden-overflow {
+  overflow: hidden;
+}
+.ellipsis-text {
+  text-overflow: ellipsis;
+}
+.bold {
+  font-weight: bold;
+}
+.pointer-cursor {
+  cursor: pointer;
+}

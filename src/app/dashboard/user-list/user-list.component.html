@@ -1,0 +1,28 @@
+<div class="flex-display column-direction bg-secondary-blue fh">
+  <div class="search-section bg-primary-blue p-20 no-bottom-padding">
+    <form [formGroup]="searchForm">
+      <mat-form-field appearance="fill" class="fw search-field">
+        <mat-icon matPrefix>search</mat-icon>
+        <mat-label>Search...</mat-label>
+        <input matInput formControlName="search" autocomplete="off" />
+      </mat-form-field>
+    </form>
+  </div>
+  <div
+    class="list-section"
+    *ngFor="let user of userData | search: 'first_name':searchForm.value.search"
+  >
+    <div
+      class="list-item p-20 flex-display align-center no-right-padding pointer-cursor"
+    (click)="selectUser(user)">
+      <img src="{{ user.avatar }}" class="avatar m-r-20" />
+      <div
+        class="user-details flex-display column-direction flex-one hidden-overflow"
+      >
+        <p class="bold ellipsis-text hidden-overflow">{{ user.first_name }}</p>
+        <p class="ellipsis-text hidden-overflow">{{ user.email }}</p>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+  </div>
+</div>

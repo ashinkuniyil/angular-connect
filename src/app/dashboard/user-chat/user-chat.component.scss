@@ -1,0 +1,17 @@
+.status-section {
+  p {
+    margin: 0;
+  }
+  .name {
+    font-weight: bold;
+    font-size: 18px;
+  }
+}
+.chat-area {
+  flex-basis: 1px;
+}
+.avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}

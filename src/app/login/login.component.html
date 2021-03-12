@@ -1,0 +1,29 @@
+<div class="login-container flex-display column-direction content-center">
+  <div class="login-section flex-display column-direction align-center">
+    <fa-icon [icon]="faImdb" size="6x"></fa-icon>
+    <form [formGroup]="loginForm" class="fw">
+      <div class="form-elements">
+        <mat-form-field appearance="legacy" class="form-item">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" required type="email" />
+        </mat-form-field>
+      </div>
+      <div class="form-elements">
+        <mat-form-field appearance="legacy" class="form-item">
+          <mat-label>Password</mat-label>
+          <input matInput formControlName="password" required type="password" />
+        </mat-form-field>
+      </div>
+      <button
+        mat-flat-button
+        color="primary"
+        class="fw m-t-10"
+        (click)="actLogin()"
+        [disabled]="!loginForm.valid"
+      >
+        Login
+      </button>
+    </form>
+    <a mat-button class="m-t-10" (click)="openRegistraionDialog()">Register</a>
+  </div>
+</div>
