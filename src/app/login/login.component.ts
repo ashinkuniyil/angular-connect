@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faImdb } from '@fortawesome/free-brands-svg-icons';
+import { faAngular } from '@fortawesome/free-brands-svg-icons';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DataStore } from '../utilities/data-store';
@@ -14,7 +14,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  faImdb = faImdb;
+  faAngular = faAngular;
   loginForm: FormGroup;
   dataStore: DataStore;
   constructor(
