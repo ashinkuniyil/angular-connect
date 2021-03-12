@@ -52,7 +52,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     ErrorDialogService,
     AuthGuard,
   ],
-  entryComponents: [ErrorDialogComponent],
+  entryComponents: [ErrorDialogComponent,RegistrationComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

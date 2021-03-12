@@ -43,10 +43,15 @@ export class LoginComponent implements OnInit {
   }
   actLogin() {
     this._snackBar.open('Loading...');
-    this.apiService.post('login', this.loginForm.value).subscribe((data) => {
-      this._snackBar.dismiss();
-      this.dataStore.setData('token', data);
-      this.router.navigate(['/', 'dashboard']);
-    });
+    this.apiService.post('login', this.loginForm.value).subscribe(
+      (data) => {
+        this._snackBar.dismiss();
+        this.dataStore.setData('token', data);
+        this.router.navigate(['/', 'dashboard']);
+      },
+      () => {
+        this._snackBar.dismiss();
+      }
+    );
   }
 }
